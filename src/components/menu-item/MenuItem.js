@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 
 const MenuItem = (props) => {
   const { title, img, size, linkURL, match, history } = props;
-  console.log(match.url);
   return (
     <div
       className={`${size} menu-item`}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./sign-up-form.styles.scss";
 import FormInput from "../form-input/FormInput";
 import CustomButton from "../custom-button/CustomButton";
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
 const SignUpForm = () => {
   const [form, setForm] = useState({
@@ -11,8 +12,30 @@ const SignUpForm = () => {
     confirmPassword: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const { displayName, email, password, confirmPassword } = form;
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await createUserProfileDocument(user, { displayName });
+      setForm({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    } catch (error) {
+      console.log("An error occurred", error.message);
+    }
   };
 
   const handleChange = ({ name, value }) => {

@@ -11,6 +11,21 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      button {
+        display: block;
+      }
+      opacity: 70%;
+    }
+
+    button {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 25%;
+    }
   }
 
   .collection-footer {

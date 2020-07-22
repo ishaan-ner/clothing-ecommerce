@@ -9,3 +9,10 @@ export const addItemToCart = (cart, item) => {
   }
   return [...cart, { ...item, quantity: 1 }];
 };
+
+export const decrementItem = (cart, item) => {
+  if (item.quantity === 1) return [...cart];
+  return cart.map((e) =>
+    e.id === item.id ? { ...e, quantity: e.quantity - 1 } : e
+  );
+};

@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./shop.styles.scss";
-import SHOP_DATA from "./shop.data";
-import Collection from "../../components/collection/Collection";
+import { connect } from "react-redux";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
+import CollectionOverview from "../../components/collection-overview/CollectionOverview";
+import Category from "../category/Category";
 
-const Shop = () => {
-  const [shopData, setShopData] = useState([]);
-  useEffect(() => {
-    setShopData(SHOP_DATA);
-  }, []);
+const Shop = ({ shop }) => {
+  const match = useRouteMatch();
   return (
     <div className="shop-page">
-      {shopData.map((collection) => (
-        <div key={collection.id}>
-          <Collection {...collection} />
-        </div>
-      ))}
+      <Switch>
+        <Route exact path={match.path}>
+          <CollectionOverview />
+        </Route>
+        <Route path={`${match.path}/:category`}>
+          <Category />
+        </Route>
+      </Switch>
     </div>
   );
 };
 
-export default Shop;
+const mapStateToProps = (state) => ({
+  shop: state.shop,
+});
+
+export default connect(mapStateToProps)(Shop);

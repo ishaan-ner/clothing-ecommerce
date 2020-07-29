@@ -13,7 +13,7 @@ const CheckoutItem = ({
   incrementItem,
   decrementItem,
 }) => {
-  const { name, price, quantity, imageUrl, id } = item;
+  const { name, price, quantity, imageUrl } = item;
   return (
     <div className="checkout-item">
       <div className="image-container">

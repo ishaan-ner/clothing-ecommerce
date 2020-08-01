@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/crown.svg";
 import "./header.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
@@ -11,7 +10,10 @@ const Header = ({ currentUser, isCartOpen }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        <Logo className="logo" />
+        <span>
+          <i class="fas fa-laptop"></i>
+        </span>
+        <span className="home-button">SimplyElectronics</span>
       </Link>
       <div className="options">
         <Link className="option" to="/shop">

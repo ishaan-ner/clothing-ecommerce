@@ -11,7 +11,7 @@ const Header = ({ currentUser, isCartOpen }) => {
     <div className="header">
       <Link className="logo-container" to="/">
         <span>
-          <i class="fas fa-laptop"></i>
+          <i className="fas fa-laptop"></i>
         </span>
         <span className="home-button">SimplyElectronics</span>
       </Link>

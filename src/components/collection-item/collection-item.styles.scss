@@ -19,14 +19,13 @@
       button {
         display: block;
       }
-      opacity: 70%;
+      opacity: 0.7;
     }
-  }
-
-  button {
-    display: none;
-    position: absolute;
-    top: 255px;
+    button {
+      display: none;
+      position: absolute;
+      top: 255px;
+    }
   }
 
   .collection-footer {

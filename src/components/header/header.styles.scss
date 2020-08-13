@@ -5,6 +5,18 @@
   justify-content: space-between;
   margin-bottom: 25px;
 
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 13px;
+
+    .logo-container {
+      .home-button {
+        display: none;
+      }
+    }
+  }
+
   .logo-container {
     height: 100%;
     width: 70px;
@@ -20,6 +32,10 @@
     cursor: pointer;
     .option {
       padding: 10px 15px;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
     }
   }
 

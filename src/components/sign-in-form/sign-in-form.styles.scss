@@ -10,4 +10,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 80px;
+    button {
+      min-width: unset;
+    }
+  }
 }

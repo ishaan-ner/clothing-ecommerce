@@ -4,20 +4,20 @@ An e-commerce site for electronics products.
 https://simply-electronics.netlify.app/
 
 ## Features: 
-⋅⋅* Fast, mobile-responsive Single Page Application.
-⋅⋅* E-mail and google authentication with Firebase.
-⋅⋅* Mock credit card payments with Stripe.
-⋅⋅* Global state management with REDUX.
-⋅⋅* Functional components and React Hooks
+  * Fast, mobile-responsive Single Page Application.
+  * E-mail and google authentication with Firebase.
+  * Mock credit card payments with Stripe.
+  * Global state management with REDUX.
+  * Functional components and React Hooks
 
 
 ## Built with the following tech-stack: 
-⋅⋅* React
-⋅⋅* REDUX
-⋅⋅* React-Router 
-⋅⋅* Sass 
-⋅⋅* Firebase
-⋅⋅* Stripe
+  * React
+  * REDUX
+  * React-Router 
+  * Sass 
+  * Firebase
+  * Stripe
 
 
 
